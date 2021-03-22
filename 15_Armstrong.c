@@ -1,28 +1,27 @@
 //Author: Gulshan Sharma
 //Purpose: Check no. is armstrong or not using while loop
 
-#include <stdio.h>
-int main() {
-  int num, originalNum, remainder, result = 0;
-  printf("Enter a three-digit integer: \n");
-  scanf("%d", &num);//It will scan the operater entered by user.
-  originalNum = num;
+#include <stdio.h>        //Pre-Process directive to include input output header file.
+int main()
+{
+  int n, r, c, sum = 0, temp;  //function deceleration 
+  printf("enter n value\n");   //printing the statement 
+  scanf("%d", &n);          
 
-  while (originalNum != 0) {
-     //Formula
-     // remainder contains the last digit
-    remainder = originalNum % 10;
-        
-    result += remainder * remainder * remainder;
-        
-       // removing last digit from the orignal number
-    originalNum /= 10;
+  while(n>0)           //while loop 
+  {
+    r = n%10;
+    c = r * r * r;
+    sum = sum + c;
+    n = n/10;
   }
+  n = temp;
+  
+  if (n == sum)                //if statement
+    printf("Armstrong");
+  else                             //else statement
+    printf("not am Armstrong");
 
-  if (result == num)
-      printf("%d is an Armstrong number.", num);
-  else
-      printf("%d is not an Armstrong number.", num);
-
-  return 0;
+  return 0;                 //return statement 
 }
+  
