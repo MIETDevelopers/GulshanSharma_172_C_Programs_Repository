@@ -1,26 +1,47 @@
 //Author: Gulshan Sharma
 //Purpose:To find the area and perimeter of Circle, Square and Rectangle
 
-#include<stdio.h>
-int main(){                    //Main Function body
-	float radius;            //Data type & Variable declaration
-	float side;
-	float length;
-	float breadth;
+#include <stdio.h> //Standard input output library
+int main(){   //Main function body starting
+	//variable declaration of dimensions of square,rectangle and circle of int data type
+	int side_of_square;
+	int length_of_rectangle, breadth_of_rectangle;
+	int radius_of_circle;
 
-	scanf("%f %f %f %f", &radius, &side, &length, &breadth);
+	//variable declaration of area and perimeter of square and rectangle of int data type
+	int area_of_square, area_of_rectangle, perimeter_of_square, perimeter_of_rectangle;
 
-	printf("Area of Circle: %f\n", ((22 * radius * radius)/7));  //Print function calling           area of circle = (22/7)*r*r 
+	//variable declaration of area of circle of float data type
+	float area_of_circle, perimeter_of_circle;       
 
-	printf("Perimeter of Circle: %f", ((2 * 22 * radius)/7));  //Print function calling            perimeter of circle = 2*(22/7)*r
+	//Assigning values to the declared variables
+	radius_of_circle=3;
+	side_of_square=4;
+	length_of_rectangle=5;
+	breadth_of_rectangle=2;
+	area_of_circle=3.14*(radius_of_circle*radius_of_circle);
+	perimeter_of_circle=2*3.14*(radius_of_circle);
+	area_of_square=side_of_square*side_of_square;
+	perimeter_of_square=4*(side_of_square);
+	area_of_rectangle=length_of_rectangle*breadth_of_rectangle;
+	perimeter_of_rectangle=2*(length_of_rectangle+breadth_of_rectangle);
 
-	printf("Area of Square: %f\n", (side * side));  //Print function calling                    area of square = side*side
+	//Printing the value of area of circle
+	printf("Area of Circle=%f\n",area_of_circle);
 
-	printf("Perimeter of Square: %f\n", (4 * side));  //Print function calling                  perimeter of square = 4 * side of square
+	//Printing circumfrence of circle 
+	printf("Circumfrence of Circle=%f\n",perimeter_of_circle); 
 
-	printf("Area of Rectangle: %f\n", (length * breadth)); //Print function calling              area of rectangle = length * breadth
+	//Printing area of square  
+	printf("Area of Square=%d\n",area_of_square);  
 
-	printf("Perimeter of Rectangle: %f", (2 * (length + breadth))); //Print function calling             perimeter of rectange = 2 *(length + breadth)
+	//Printing perimeter of square
+	printf("Perimeter of Square=%d\n",perimeter_of_square); 
 
-	return 0;                      //Return Statement
+	//Printing area of rectangle
+	printf("Area of Rectangle=%d\n",area_of_rectangle);  
+
+	//Printing perimeter of rectangle
+	printf("Perimeter of Rectangle=%d\n",perimeter_of_rectangle);  
+return 0;   //return statement
 }
