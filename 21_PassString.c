@@ -1,5 +1,5 @@
 //Author: Gulshan Sharma
-//A C Program for passing string to a Function. 			© Ishav Verma 19/March/2021
+//A C Program for passing string to a Function. 	
 
 #include <stdio.h>  //Pre-process directive to include standard input and output functions header file
 void displayString(char str[]);
